@@ -35,6 +35,8 @@ end
 gem 'cancan'
 
 gem 'devise', '3.2.2'
+
+gem 'rspec'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
