@@ -36,7 +36,10 @@ gem 'cancan'
 
 gem 'devise', '3.2.2'
 
-gem 'rspec'
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
