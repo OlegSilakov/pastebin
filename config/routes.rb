@@ -1,4 +1,5 @@
 Pastebin::Application.routes.draw do
+  get "main_page/index"
   devise_for :users
   get "persons/profile", as: "user_root"
   get "users/index"
@@ -7,7 +8,7 @@ Pastebin::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'main_page#index', as: 'main_page'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
