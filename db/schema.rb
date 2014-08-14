@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140814105641) do
+ActiveRecord::Schema.define(version: 20140814125301) do
 
   create_table "log_texts", force: true do |t|
     t.string   "author_mail"
     t.text     "description"
     t.datetime "time_created"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "logposts", force: true do |t|
+    t.string   "user_mail"
+    t.text     "content"
+    t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

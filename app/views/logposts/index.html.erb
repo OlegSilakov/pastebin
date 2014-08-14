@@ -1,0 +1,31 @@
+<h1>Listing logposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User mail</th>
+      <th>Content</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logposts.each do |logpost| %>
+      <tr>
+        <td><%= logpost.user_mail %></td>
+        <td><%= logpost.content %></td>
+        <td><%= logpost.date %></td>
+        <td><%= link_to 'Show', logpost %></td>
+        <td><%= link_to 'Edit', edit_logpost_path(logpost) %></td>
+        <td><%= link_to 'Destroy', logpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Logpost', new_logpost_path %>

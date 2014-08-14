@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User mail:</strong>
+  <%= @logpost.user_mail %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @logpost.content %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @logpost.date %>
+</p>
+
+<%= link_to 'Edit', edit_logpost_path(@logpost) %> |
+<%= link_to 'Back', logposts_path %>
