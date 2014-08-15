@@ -36,7 +36,7 @@ gem 'cancan'
 
 gem 'devise', '3.2.2'
 
-group :test do
+group :test, :development do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara'
