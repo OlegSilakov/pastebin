@@ -11,6 +11,6 @@ describe "user sign in" do
 
     click_button "Sign in"
 
-    page.should have_content("Signed in successfully.")
+    expect(page).to have_content("Signed in successfully.")
   end
 end
