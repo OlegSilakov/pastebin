@@ -8,4 +8,40 @@
   <%= link_to 'На главную', main_page_path(@main_page) %>
   <p/>
   <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+
+  <h1>Listing logposts</h1>
+
+  <%= link_to 'Logposts', logposts_path %>
+
+  <table>
+  <thead>
+    <tr>
+      <th>User mail</th>
+      <th>Content</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logpost.each do |log| %>
+      <tr>
+        <td><%= log.user_mail %></td>
+        <td><%= log.content %></td>
+        <td><%= log.date %></td>
+        <td><%= link_to 'Show', log %></td>
+        <td><%= link_to 'Edit', edit_logpost_path(log) %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Logpost', new_logpost_path %>
+
 <% end %>
+

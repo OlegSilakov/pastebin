@@ -11,4 +11,31 @@
 <% else %>
   <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 <% end %>
-<p>Paste log</p>
+
+<h1>Listing logposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User mail</th>
+      <th>Content</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logposts.each do |logpost| %>
+      <tr>
+        <td><%= logpost.user_mail %></td>
+        <td><%= logpost.content %></td>
+        <td><%= logpost.date %></td>
+        <td><%= link_to 'Show', logpost %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

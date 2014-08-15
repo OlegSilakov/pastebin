@@ -1,5 +1,5 @@
 class LogpostsController < ApplicationController
-  before_action :set_logpost, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :set_logpost, only: [:show, :edit, :update, :destroy]
 
   # GET /logposts
   # GET /logposts.json
