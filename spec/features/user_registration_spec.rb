@@ -16,7 +16,7 @@ describe "user registration" do
     fill_in "Password confirmation", :with => user.password_confirmation
 
     click_button "Sign up"
-
-    page.should have_content("Welcome! You have signed up successfully.")
+    
+    expect(page).to have_content("Welcome! You have signed up successfully.")
   end
 end
