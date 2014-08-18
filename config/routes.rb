@@ -1,7 +1,7 @@
 Pastebin::Application.routes.draw do
   get "main_page/index"
   devise_for :users
-  get "persons/profile", as: "user_root"
+  get "people/profile", as: "user_root"
   get "users/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
