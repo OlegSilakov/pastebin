@@ -10,6 +10,7 @@ class LogpostsController < ApplicationController
   # GET /logposts/1
   # GET /logposts/1.json
   def show
+    @current_url = request.original_url
   end
 
   # GET /logposts/new
@@ -56,7 +57,7 @@ class LogpostsController < ApplicationController
   def destroy
     @logpost.destroy
     respond_to do |format|
-      format.html { redirect_to logposts_url }
+      format.html { redirect_to :user_root }
       format.json { head :no_content }
     end
   end
