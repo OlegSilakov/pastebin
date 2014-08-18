@@ -4,12 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-  	# logposts_path
-  	user_root
+  	# :user_root
+    request.referer
   end
 
   def after_sign_out_path_for(resource_or_scope)
     # request.referrer
-    main_page_path
+    request.referer
+    # main_page_path
   end
 end
