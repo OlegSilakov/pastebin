@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "Logpost" do
-  scenario "Register user and add new logpost" do
+  scenario "Register user and add new logpost" do  
     user = FactoryGirl.create(:user)
     visit "/users/sign_in"
     fill_in "Email",  :with => user.email
