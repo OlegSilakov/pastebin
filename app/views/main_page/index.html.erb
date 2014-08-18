@@ -5,7 +5,7 @@
 <% if user_signed_in? %>
   <span>Здравствуйте, <%= current_user.email %></span>
   <p/>
-  <%= link_to 'Профиль', controller: "persons", action: "profile" %>
+  <%= link_to 'Профиль', controller: "people", action: "profile" %>
   <p/>
   <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
 <% else %>
