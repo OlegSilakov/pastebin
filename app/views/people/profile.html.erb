@@ -1,0 +1,11 @@
+<h1>People#profile</h1>
+<p>Find me in app/views/people/profile.html.erb</p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<% if user_signed_in? %>
+  <span>Здравствуйте, <%= current_user.email %></span>
+  <p/>
+  <%= link_to 'На главную', main_page_path(@main_page) %>
+  <p/>
+  <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+<% end %>

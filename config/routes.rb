@@ -1,10 +1,14 @@
 Pastebin::Application.routes.draw do
+  get "main_page/index"
+  devise_for :users
+  get "people/profile", as: "user_root"
+  get "users/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+  root 'main_page#index', as: 'main_page'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
