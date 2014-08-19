@@ -1,16 +1,4 @@
 FactoryGirl.define do
-  sequence :email do |n|
-    "email#{n}@example.com"
-  end
-
-  factory :user do
-    email
-    password "ilovegrapes"
-    password_confirmation "ilovegrapes"
-  end
-end
-
-FactoryGirl.define do
   factory :logpost do
     user_mail "ex3@mail.com"
     content "[13263] 2014-03-03 15:11:45 Request: /app_tracker/v1/callback"
