@@ -37,6 +37,7 @@ gem 'cancan'
 gem 'devise', '3.2.2'
 
 group :test, :development do
+  gem 'zeroclipboard-rails'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara'
