@@ -26,7 +26,7 @@
   </thead>
 
   <tbody>
-    <% @logpost.each do |log| %>
+    <% @current_user_logposts.each do |log| %>
       <tr>
         <td><%= log.user_mail %></td>
         <td><%= log.content %></td>
