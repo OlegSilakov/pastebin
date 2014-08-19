@@ -24,4 +24,4 @@
 </p>
 
 <%= link_to 'Edit', edit_logpost_path(@logpost) %> |
-<%= link_to 'Back', request.referer %>
+<%= link_to 'Back', request.referer.blank? ? main_page_path : request.referer %>
