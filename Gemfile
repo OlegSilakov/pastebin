@@ -32,8 +32,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'cancan'
-
 gem 'devise', '3.2.2'
 
 group :test, :development do
