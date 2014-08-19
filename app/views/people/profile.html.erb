@@ -26,6 +26,7 @@
   </thead>
 
   <tbody>
+    <%= paginate @current_user_logposts %>
     <% @current_user_logposts.each do |log| %>
       <tr>
         <td><%= log.user_mail %></td>
