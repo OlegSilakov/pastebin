@@ -52,6 +52,6 @@ class LogpostsController < ApplicationController
     end
 
     def logpost_params
-      params.require(:logpost).permit(:user_mail, :content, :date)
+      params.require(:logpost).permit(:user_id, :user_mail, :content, :date)
     end
 end
