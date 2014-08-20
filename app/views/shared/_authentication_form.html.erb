@@ -1,0 +1,7 @@
+<span>Здравствуйте, <%= current_user.email %></span>
+<p/>
+<%= link_to 'На главную', controller: "main_page", action: "index" %>
+<p/>
+<%= link_to 'Профиль', controller: "people", action: "profile" %>
+<p/>
+<%= link_to 'Выйти', destroy_user_session_path, method: :delete %>

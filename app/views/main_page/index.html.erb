@@ -3,11 +3,7 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <% if user_signed_in? %>
-  <span>Здравствуйте, <%= current_user.email %></span>
-  <p/>
-  <%= link_to 'Профиль', controller: "people", action: "profile" %>
-  <p/>
-  <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+  <%= render 'shared/authentication_form' %>
 <% else %>
   <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 <% end %>

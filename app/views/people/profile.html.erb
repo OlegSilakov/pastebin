@@ -3,11 +3,7 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <% if user_signed_in? %>
-  <span>Здравствуйте, <%= current_user.email %></span>
-  <p/>
-  <%= link_to 'На главную', main_page_path(@main_page) %>
-  <p/>
-  <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+  <%= render 'shared/authentication_form' %>
 
 <p />
 <%= link_to 'New Logpost', new_logpost_path %>
