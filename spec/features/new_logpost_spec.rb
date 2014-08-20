@@ -3,7 +3,7 @@ require "rails_helper"
 feature "Logpost" do
   background { @user = FactoryGirl.create(:user) }
 
-  scenario "Register user and add new logpost" do     
+  scenario "Sign in user and add new logpost" do     
     visit "/users/sign_in"
 
     fill_in "Email", with: @user.email
