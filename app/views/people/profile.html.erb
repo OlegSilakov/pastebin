@@ -7,19 +7,8 @@
 
 <p />
 <%= link_to 'New Logpost', new_logpost_path %>
-  <h1>Listing logposts</h1>
 
-  <table>
-  <thead>
-    <tr>
-      <th>User mail</th>
-      <th>Content</th>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= render 'shared/logpost_table_header' %>
 
   <tbody>
     <%= paginate @current_user_logposts %>
@@ -33,8 +22,8 @@
         <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+
+<%= render 'shared/logpost_table_footer' %>
 
 <% end %>
 

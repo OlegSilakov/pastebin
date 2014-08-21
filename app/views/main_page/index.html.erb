@@ -8,19 +8,7 @@
   <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 <% end %>
 
-<h1>Listing logposts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User mail</th>
-      <th>Content</th>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= render 'shared/logpost_table_header' %>
 
   <tbody>
     <%= paginate @logposts %>
@@ -33,7 +21,7 @@
         <td><%= "#{request.host}/logposts/#{logpost.id}" %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+
+<%= render 'shared/logpost_table_footer' %>
 
 <br>
