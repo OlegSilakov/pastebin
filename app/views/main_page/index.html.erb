@@ -30,6 +30,7 @@
         <td><%= logpost.content %></td>
         <td><%= logpost.date %></td>
         <td><%= link_to 'Show', logpost %></td>
+        <td><%= "#{request.host}/logposts/#{logpost.id}" %></td>
       </tr>
     <% end %>
   </tbody>
