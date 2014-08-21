@@ -17,7 +17,7 @@
 
 <p>
   <strong>Url: </strong>
-  <label id='clipboard_text'><%= @current_url %></label>
+  <label id='clipboard_text'><%= logpost_url(@logpost) %></label>
   <button data-clipboard-target='clipboard_text' id='d_clip_button' title='Click me to copy to clipboard.'>
     <b>Copy To Clipboard...</b>
   </button>
