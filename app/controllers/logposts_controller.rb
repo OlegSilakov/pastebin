@@ -2,7 +2,6 @@ class LogpostsController < ApplicationController
   before_action :authenticate_user!, :set_logpost, only: [:show, :edit, :update, :destroy]
 
   def show
-    # @current_url = request.original_url
     @current_url = "#{request.host}/logposts/#{@logpost.id}"
   end
 
