@@ -7,7 +7,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= Parser.parse_log(@logpost.content) %>
+  <%= Parser.parse_log(@logpost.content).html_safe %>
 </p>
 
 <p>
