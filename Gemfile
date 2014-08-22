@@ -38,6 +38,8 @@ gem 'kaminari'
 
 gem 'rails_config'
 
+gem 'draper', '~> 1.3'
+
 group :test, :development do
   gem 'zeroclipboard-rails'
   gem 'rspec'
