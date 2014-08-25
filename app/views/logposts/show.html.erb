@@ -7,8 +7,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%# Parser.parse_log(@logpost.content).html_safe %>
-  <code class="Markdown"><%= @logpost.content %></code>
+  <%= Decorator.decorate_post(@logpost.content).html_safe %>
 </p>
 
 <p>
