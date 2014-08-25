@@ -1,3 +1,5 @@
+<link href="prism.css" rel="stylesheet" type="text/css" />
+<script src="prism.js" type="text/javascript"></script>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +9,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= Decorator.decorate_post(@logpost.content).html_safe %>
+  <pre><%= Decorator.decorate_post(@logpost.content).html_safe %></pre>
 </p>
 
 <p>

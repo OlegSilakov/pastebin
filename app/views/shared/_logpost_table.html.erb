@@ -16,7 +16,7 @@
   <% @logposts.each do |logpost| %>
     <tr>
       <td><%= logpost.user_mail %></td>
-      <td><%= logpost.content %></td>
+      <td><pre><code class="language-javascript"><%= logpost.content %></code></pre></td>
       <td><%= logpost.date %></td>
       <td><%= link_to 'Show', logpost %></td>
       <% if edit %>
