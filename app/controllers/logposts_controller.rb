@@ -47,6 +47,7 @@ class LogpostsController < ApplicationController
     end
   end
 
+
   private
     def set_logpost
       @logpost = Logpost.find(params[:id])

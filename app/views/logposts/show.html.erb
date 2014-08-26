@@ -25,5 +25,9 @@
   </button>
 </p>
 
-<%= link_to 'Edit', edit_logpost_path(@logpost) %> |
+<p>
+  <%= link_to 'Download', download_download_log_path(@logpost, id: @logpost.id), target: "_blank" %>
+</p>
+
+<%= link_to 'Edit', edit_logpost_path() %> |
 <%= link_to 'Back', request.referer.blank? ? main_page_path : request.referer %>

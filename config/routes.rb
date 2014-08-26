@@ -1,11 +1,11 @@
 Pastebin::Application.routes.draw do
+  get "download/download_log"
   resources :logposts
 
   get "main_page/index"
   devise_for :users
   get "people/profile", as: "user_root"
-  get "users/index"
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
