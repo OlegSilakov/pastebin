@@ -12,7 +12,7 @@ class LogpostDecorator < Draper::Decorator
   #     end
   #   end
   def created_at
-    @logpost.content.split(%r{\n}).reduce([]) do |acc, v|
+    logpost.content.split(%r{\n}).reduce([]) do |acc, v|
       acc << "<a href = '#L#{acc.length}' style='text-decoration: none'><code class='language-javascript'>#{v}</code></a>"
     end.join
   end

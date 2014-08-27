@@ -51,7 +51,7 @@ class LogpostsController < ApplicationController
 
   private
     def set_logpost
-      @logpost = Logpost.find(params[:id])
+      @logpost = LogpostDecorator.find(params[:id])
     end
 
     def logpost_params
