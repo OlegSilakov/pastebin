@@ -9,8 +9,7 @@
 
 <p>
   <strong>Content:</strong>
-  <!-- <pre><%# Decorator.decorate_post(@logpost.content).html_safe %></pre> -->
-  <pre><%= @logpost.content%></pre>
+  <pre><%= Decorator.decorate_post(@logpost.content).html_safe %></pre>
 <p>
   <strong>Date:</strong>
   <%= @logpost.date %>

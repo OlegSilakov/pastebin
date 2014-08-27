@@ -2,7 +2,6 @@ require "decorator.rb"
 
 class LogpostsController < ApplicationController
   before_action :authenticate_user!, :set_logpost, only: [:show, :edit, :update, :destroy]
-  decorates_assigned :logpost
 
   def show
   end
@@ -51,7 +50,7 @@ class LogpostsController < ApplicationController
 
   private
     def set_logpost
-      @logpost = LogpostDecorator.find(params[:id])
+      @logpost = Logpost.find(params[:id])
     end
 
     def logpost_params
