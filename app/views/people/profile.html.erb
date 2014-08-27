@@ -4,26 +4,10 @@
 <p class="alert"><%= alert %></p>
 <% if user_signed_in? %>
   <%= render 'shared/authentication_form' %>
-
 <p />
 <%= link_to 'New Logpost', new_logpost_path %>
 
-<%= render 'shared/logpost_table_header' %>
-
-  <tbody>
-    <%= paginate @current_user_logposts %>
-    <% @current_user_logposts.each do |log| %>
-      <tr>
-        <td><%= log.user_mail %></td>
-        <td><%= log.content %></td>
-        <td><%= log.date %></td>
-        <td><%= link_to 'Show', log %></td>
-        <td><%= link_to 'Edit', edit_logpost_path(log) %></td>
-        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-
-<%= render 'shared/logpost_table_footer' %>
+<%= render 'shared/logpost_table', edit: true %>
 
 <% end %>
 

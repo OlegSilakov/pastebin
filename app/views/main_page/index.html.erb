@@ -8,19 +8,6 @@
   <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 <% end %>
 
-<%= render 'shared/logpost_table_header' %>
-
-    <%= paginate @logposts %>
-    <% @logposts.each do |logpost| %>
-      <tr>
-        <td><%= logpost.user_mail %></td>
-        <td><%= logpost.content %></td>
-        <td><%= logpost.date %></td>
-        <td><%= link_to 'Show', logpost %></td>
-        <td><%# "#{request.host}/logposts/#{logpost.id}" %></td>
-      </tr>
-    <% end %>
-
-<%= render 'shared/logpost_table_footer' %>
+<%= render 'shared/logpost_table', edit: false %>
 
 <br>
