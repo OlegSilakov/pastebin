@@ -2,6 +2,7 @@ require "decorator.rb"
 
 class LogpostsController < ApplicationController
   before_action :authenticate_user!, :set_logpost, only: [:show, :edit, :update, :destroy]
+  decorates_assigned :logpost
 
   def show
   end
