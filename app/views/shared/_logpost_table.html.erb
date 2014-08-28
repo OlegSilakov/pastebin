@@ -15,10 +15,10 @@
   <%= paginate @logposts %>
   <% @logposts.each do |logpost| %>
     <tr>
+      <td><%= link_to 'Show', logpost %></td>
       <td><%= logpost.user_mail %></td>
       <td><pre><code class="language-javascript"><%= logpost.content %></code></pre></td>
       <td><%= logpost.date %></td>
-      <td><%= link_to 'Show', logpost %></td>
       <% if edit %>
       <td><%= link_to 'Edit', edit_logpost_path(logpost) %></td>
       <td><%= link_to 'Destroy', logpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
