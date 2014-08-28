@@ -42,6 +42,8 @@ gem 'pg'
 
 gem 'haml'
 
+gem 'haml-rails'
+
 group :test, :development do
   gem 'zeroclipboard-rails'
   gem 'rspec'

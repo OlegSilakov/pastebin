@@ -1,0 +1,9 @@
+%h1 People#profile
+%p Find me in app/views/people/profile.html.erb
+%p.notice= notice
+%p.alert= alert
+- if user_signed_in?
+  = render 'shared/authentication_form'
+  %p
+  = link_to 'New Logpost', new_logpost_path
+  = render 'shared/logpost_table', edit: true

@@ -1,0 +1,11 @@
+%h1 MainPage#index
+%p Find me in app/views/main_page/index.html.erb
+%p.notice= notice
+%p.alert= alert
+- if user_signed_in?
+  = render 'shared/authentication_form'
+- else
+  = link_to 'Войти', new_user_session_path
+  или
+  = link_to 'Зарегистрироваться', new_user_registration_path
+= render 'shared/logpost_table', edit: false

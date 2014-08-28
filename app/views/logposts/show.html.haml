@@ -1,0 +1,25 @@
+%p#notice= notice
+
+%p
+  %strong User mail:
+  = @logpost.user_mail
+
+%p
+  %strong Content:
+  %pre= split_lines(@logpost.content).html_safe
+
+%p
+  %strong Date:
+  = @logpost.date
+
+%p
+  %strong Url:
+  %label#clipboard_text= logpost_url(@logpost)
+  %button#d_clip_button{"data-clipboard-target" => "clipboard_text", :title => "Click me to copy to clipboard."}
+    %b Copy To Clipboard
+
+%p= link_to 'Download', download_download_log_path(@logpost, id: @logpost.id), target: "_blank"
+
+= link_to 'Edit', edit_logpost_path()
+|
+= link_to 'Back', request.referer.blank? ? main_page_path : request.referer

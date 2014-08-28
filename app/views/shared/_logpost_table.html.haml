@@ -1,0 +1,23 @@
+%h1 Listing logposts
+%table
+  %thead
+    %tr
+      %th User mail
+      %th Content
+      %th Date
+      %th
+      %th
+      %th
+  %tbody
+    = paginate @logposts
+    - @logposts.each do |logpost|
+      %tr
+        %td= link_to 'Show', logpost
+        %td= logpost.user_mail
+        %td
+          %pre
+            %code.language-javascript= logpost.content
+        %td= logpost.date
+        - if edit
+          %td= link_to 'Edit', edit_logpost_path(logpost)
+          %td= link_to 'Destroy', logpost, method: :delete, data: { confirm: 'Are you sure?' }
