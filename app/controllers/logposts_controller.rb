@@ -1,6 +1,4 @@
-class LogpostsController < ApplicationController
-  include LogpostsHelper
-  
+class LogpostsController < ApplicationController  
   before_action :authenticate_user!, :set_logpost, only: [:show, :edit, :update, :destroy]
 
   def show
