@@ -1,13 +1,13 @@
 require "rails_helper"
 
 feature "user sign in" do
-  scenario "User sign in after have registered" do
-    user = FactoryGirl.create(:user)
+  background { @user = FactoryGirl.create(:user)}
 
+  scenario "User sign in after have registered" do
     visit "/users/sign_in"
 
-    fill_in "Email",  :with => user.email
-    fill_in "Password",  :with => user.password
+    fill_in "Email", with: @user.email
+    fill_in "Password", with: @user.password
 
     click_button "Sign in"
 

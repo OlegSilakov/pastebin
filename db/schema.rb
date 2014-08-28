@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812095542) do
+ActiveRecord::Schema.define(version: 20140820111031) do
+
+  create_table "logposts", force: true do |t|
+    t.string   "user_mail"
+    t.text     "content"
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "logposts", ["user_id"], name: "index_logposts_on_user_id"
+  add_index "logposts", ["user_mail"], name: "index_logposts_on_user_mail"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

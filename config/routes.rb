@@ -1,4 +1,6 @@
 Pastebin::Application.routes.draw do
+  resources :logposts
+
   get "main_page/index"
   devise_for :users
   get "people/profile", as: "user_root"

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User mail:</strong>
+  <%= @logpost.user_mail %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @logpost.content %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @logpost.date %>
+</p>
+
+<p>
+  <strong>Url: </strong>
+  <label id='clipboard_text'><%= logpost_url(@logpost) %></label>
+  <button data-clipboard-target='clipboard_text' id='d_clip_button' title='Click me to copy to clipboard.'>
+    <b>Copy To Clipboard...</b>
+  </button>
+</p>
+
+<%= link_to 'Edit', edit_logpost_path(@logpost) %> |
+<%= link_to 'Back', request.referer.blank? ? main_page_path : request.referer %>
