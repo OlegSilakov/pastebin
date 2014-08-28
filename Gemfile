@@ -38,6 +38,8 @@ gem 'kaminari'
 
 gem 'rails_config'
 
+gem 'pg'
+
 group :test, :development do
   gem 'zeroclipboard-rails'
   gem 'rspec'
