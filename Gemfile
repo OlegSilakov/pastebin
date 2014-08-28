@@ -44,6 +44,8 @@ gem 'haml'
 
 gem 'haml-rails'
 
+gem 'erb2haml'
+
 group :test, :development do
   gem 'zeroclipboard-rails'
   gem 'rspec'
