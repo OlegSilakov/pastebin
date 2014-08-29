@@ -1,5 +1,4 @@
 Pastebin::Application.routes.draw do
-  # get "download/download_log"
   resources :logposts
 
   get "main_page/index"
