@@ -18,7 +18,7 @@
   %button#d_clip_button{"data-clipboard-target" => "clipboard_text", :title => "Click me to copy to clipboard."}
     %b Copy To Clipboard
 
-%p= link_to 'Download', download_download_log_path(@logpost, id: @logpost.id), target: "_blank"
+%p= link_to 'Download', download_logpost_path() 
 
 = link_to 'Edit', edit_logpost_path()
 |

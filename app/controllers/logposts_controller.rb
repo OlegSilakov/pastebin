@@ -45,6 +45,9 @@ class LogpostsController < ApplicationController
     end
   end
 
+  def download
+    send_data(Logpost.find(params[:id]).content, filename: "log.log") 
+  end
 
   private
     def set_logpost
