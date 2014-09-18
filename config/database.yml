@@ -19,5 +19,3 @@ production:
   encoding: unicode
   database: postlogdb
   pool: 5
-  username: vagrant
-  password: qwerty

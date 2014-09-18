@@ -54,6 +54,10 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'shoulda-matchers', require: false
 end
+
+group :production do
+  gem 'rails_12factor'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
